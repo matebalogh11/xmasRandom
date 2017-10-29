@@ -11,7 +11,7 @@ def index():
         password = request.form.get("pass")
         name = request.form.get("name")
 
-        if password == "champagne":
+        if password == "rondapulcsi":
             if name:
                 result = db.check_name(name)
                 if result == "invalid name":

@@ -13,3 +13,4 @@ INSERT INTO shower (name) VALUES ('patócs viktória');
 INSERT INTO shower (name) VALUES ('szabó beáta');
 INSERT INTO shower (name) VALUES ('patócs bettina');
 INSERT INTO shower (name) VALUES ('simon dóra');
+INSERT INTO shower (name) VALUES ('almási gréta');
