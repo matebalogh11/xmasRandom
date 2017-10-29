@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Champagne karácsonyi móka</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">defer</script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">defer</script>
+  <script src="{{ url_for('static', filename='script.js') }}">defer</script>
+  <link href="https://fonts.googleapis.com/css?family=Mountains+of+Christmas" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css')}}">
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 450px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: lightgray;
+      color: white;
+      padding: 15px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+
+      }
+      .row.content {height:auto;} 
+    }
+  </style>
+</head>
+<body>
+  
+<div class="container-fluid text-center">    
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+    </div>
+    <div class="col-sm-8 text-center"> 
+      <h1>Champagne karácsonyi húzás</h1>
+      <p>Kérlek add meg a teljes neved és a jelszót amely bizonyítja, hogy a csoport tagja vagy.</p>
+      <hr>
+      <form>
+        Teljes név:<br>
+        <input type="text" name="name" placeholder="teljes név" required><br>
+        Jelszó:<br>
+        <input type="password" name="pass" placeholder="jelszó" required><br><br>
+        <input type="submit" value="Submit">
+      </form><br>
+      <p id="message"></p>
+    </div>
+    <div class="col-sm-2 sidenav">
+    </div>
+  </div>
+</div>
+
+<footer class="container-fluid row text-center">
+  <p>Champagne Shower 2017 &reg;</p>
+</footer>
+
+</body>
+</html>
+

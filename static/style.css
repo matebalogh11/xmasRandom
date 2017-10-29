@@ -1,0 +1,14 @@
+body {
+    font-family: 'Mountains of Christmas', cursive;
+    font-size: large;
+    background-image: url("snowflake.png");
+
+}
+
+.sidenav {
+    background-image: url("ring.gif")
+}
+
+footer {
+    font-family: "Times New Roman";
+}
