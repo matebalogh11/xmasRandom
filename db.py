@@ -1,18 +1,21 @@
 import psycopg2
+import urllib
+import os
 from random import randint
-
-
-DB = "champagne"
-HOST = "localhost"
-USER = "postgres"
-PW = "3dc41885"
-DNS = "dbname='{}' user='{}' host='{}' password='{}'".format(DB, USER, HOST, PW)
 
 
 def execute_sql(query, data, result=None):
     conn = None
     try:
-        conn = psycopg2.connect(DNS)
+        urllib.parse.uses_netloc.append('postgres')
+        url = urllib.parse.urlparse(os.environ.get('DATABASE_URL'))
+        conn = psycopg2.connect(
+            database=url.path[1:],
+            user=url.username,
+            password=url.password,
+            host=url.hostname,
+            port=url.port
+        )
     except psycopg2.OperationalError as error:
         print("Uh oh.. something went wrong!")
         print(error)
