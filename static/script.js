@@ -15,7 +15,7 @@ $(document).ready(function() {
                 if (res == "noname") {
                     text = "Kérlek adj meg egy nevet mindenképp!"
                 } else if (res == "wrongpass") {
-                    text = "Helytelen jelszó!"
+                    text = "Még a jelszót sem tudtad megjegyezni..!"
                 } else if (res == "invalid") {
                     text = "Helytelen név, te nem közülünk való vagy!"
                 } else if (res == "error") {

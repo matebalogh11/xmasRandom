@@ -22,8 +22,13 @@
     }
     
     /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
-    .row.content {height: 485px}
-    
+    @media screen and (max-width: 1450px) {
+      .row.content {height: 598px}
+    }
+
+    @media screen and (min-width: 1550px) {
+      .row.content {height: 400px}
+    }
     /* Set gray background color and 100% height */
     .sidenav {
       padding-top: 20px;
@@ -33,10 +38,6 @@
     
     /* Set black background color, white text and some padding */
     footer {
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        left: 0;
         padding: 1rem;
         background-color: #efefef;
         text-align: center;
@@ -60,15 +61,15 @@
     <div class="col-sm-2 sidenav">
     </div>
     <div class="col-sm-8 text-center"> 
-      <h1>Champagne karácsonyi móka</h1>
-      <p>Kérlek add meg a teljes neved és a jelszót ha elég champagne-nek érzed magad.</p>
+      <h1>Karácsonyi ajándékozós móka</h1>
+      <p id="desc">Kérlek add meg a teljes neved és a jelszót ha elég champagne-nek érzed magad.</p>
       <hr>
-      <form>
+      <form id="field">
         Teljes név:<br>
-        <input type="text" name="name" placeholder="teljes név" required><br>
+        <input id="inp" type="text" name="name" placeholder="nevet kérek" required><br>
         Jelszó:<br>
-        <input type="password" name="pass" placeholder="jelszó" required><br><br>
-        <input type="submit" value="Mutasd" class="button button2">
+        <input id="inp" type="password" name="pass" placeholder="mutasd mid van" required><br><br>
+        <input type="submit" value="Hadd lássam" class="button button2">
       </form><br>
       <p id="message"></p>
     </div>
